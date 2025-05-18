@@ -1,0 +1,190 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SubForm",
+                    "properties": {
+                        "parentSubFormId": "",
+                        "readonly": "",
+                        "loadBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "noframe": "",
+                        "formDefId": "support_ticket_form",
+                        "subFormParentId": "",
+                        "id": "ticket_details",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "label": "Section",
+                "id": "section2"
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Resolved",
+                                    "value": "resolved",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Closed - Limitations",
+                                    "value": "closed",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "status",
+                            "label": "Status",
+                            "id": "status",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SubForm",
+                        "properties": {
+                            "parentSubFormId": "",
+                            "readonly": "",
+                            "loadBinder": {
+                                "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                                "properties": {}
+                            },
+                            "noframe": "",
+                            "formDefId": "remark",
+                            "subFormParentId": "",
+                            "id": "remark",
+                            "label": "",
+                            "storeBinder": {
+                                "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                                "properties": {}
+                            },
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Internal Tools",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.Grid",
+                    "properties": {
+                        "loadBinder": {
+                            "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                            "properties": {
+                                "formDefId": "isr_remark",
+                                "foreignKey": "request_id"
+                            }
+                        },
+                        "readonly": "true",
+                        "options": [
+                            {
+                                "label": "Name",
+                                "value": "name"
+                            },
+                            {
+                                "label": "Date",
+                                "value": "dateCreated"
+                            },
+                            {
+                                "label": "Message",
+                                "value": "remarks"
+                            }
+                        ],
+                        "id": "remarks",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "",
+                            "properties": "{}"
+                        }
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "id": "section4",
+                "label": "Remarks History",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                }
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Manager Resolution Form",
+        "description": "",
+        "id": "manager_resolution_form",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "mrf"
+    }
+}

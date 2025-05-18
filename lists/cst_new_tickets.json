@@ -1,0 +1,88 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "ref_id",
+            "id": "column_0",
+            "label": "Ref Id",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "subject",
+            "id": "column_1",
+            "label": "Subject",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "status",
+            "id": "column_2",
+            "label": "status",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "createdBy",
+            "id": "column_3",
+            "label": "Created By",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "requested_date",
+            "id": "column_4",
+            "label": "Requested Date",
+            "sortable": "false"
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "CST Open Tickets",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "cst_new_tickets",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "aggregateField": [],
+            "formDefId": "support_ticket_form",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [{
+                "field": "status",
+                "join": "AND",
+                "value": "open",
+                "operator": "="
+            }],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
+    "order": ""
+}

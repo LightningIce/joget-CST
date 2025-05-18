@@ -1,0 +1,69 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "ref_id",
+            "id": "column_0",
+            "label": "Ref Id",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "subject",
+            "id": "column_2",
+            "label": "Subject",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "status",
+            "id": "column_1",
+            "label": "status",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "agent",
+            "id": "column_3",
+            "label": "agent",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "CST Closed Tickets",
+    "id": "cst_closed_tickets",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "aggregateField": [],
+            "formDefId": "support_ticket_form",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [{
+                "field": "status",
+                "join": "AND",
+                "value": "unresolvable",
+                "operator": "="
+            }],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
+    "order": ""
+}

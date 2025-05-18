@@ -1,0 +1,175 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "ref_id",
+            "id": "column_4",
+            "label": "Ref Id",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "subject",
+            "id": "column_5",
+            "label": "Subject",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Status",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "status",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_9",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Priority",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "priority",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_7",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Support Agent",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "agent",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_8",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Approved By",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "approve_by",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Escalated Manager",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "manager",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "requested_date",
+            "id": "column_6",
+            "label": "Requested Date",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "CST Escalated Tickets",
+    "id": "cst_escalate_tickets",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "aggregateField": [],
+            "formDefId": "support_ticket_form",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [{
+                "field": "status",
+                "join": "AND",
+                "value": "escalated",
+                "operator": "="
+            }],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
+    "order": ""
+}

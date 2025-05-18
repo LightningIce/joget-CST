@@ -1,0 +1,24 @@
+<appDefinition>
+   <appId>customerSupportTicketingSystem</appId>
+   <id>customerSupportTicketingSystem</id>
+   <version></version>
+   <name>Customer Support Ticketing System</name>
+   <packageDefinitionList/>
+   <formDefinitionList/>
+   <userviewDefinitionList/>
+   <datalistDefinitionList/>
+   <builderDefinitionList/>
+   <pluginDefaultPropertiesList/>
+   <environmentVariableList>
+      <environmentVariable>
+         <id>counter</id>
+         <appId>customerSupportTicketingSystem</appId>
+         <appVersion>1</appVersion>
+         <value>2</value>
+         <remarks>Used for plugin: Id Generator Field</remarks>
+      </environmentVariable>
+   </environmentVariableList>
+   <messageList/>
+   <resourceList/>
+   <license>otXos6Ro4lyODweFUOmjt2bBS2o1cjvuoCst0wdaDXMX9lQJp6b6O5WF+zfPKpCr0wu9sLz4/YNcGs5ahcaWKg==</license>
+</appDefinition>
