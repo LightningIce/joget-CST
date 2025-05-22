@@ -1,0 +1,382 @@
+{
+    "form:manager_resolution_form": {
+        "data": [{
+            "path": "elements[1].elements[0].elements[1].properties.loadBinder.properties.script",
+            "isError": false,
+            "label": "",
+            "tool": "org.joget.apps.app.lib.BeanShellOverviewTool",
+            "content": "return null;"
+        }],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_approved_request": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "form:agentResolutionForm": {
+        "data": [{
+            "path": "elements[1].elements[0].elements[1].properties.loadBinder.properties.script",
+            "isError": false,
+            "label": "",
+            "tool": "org.joget.apps.app.lib.BeanShellOverviewTool",
+            "content": "return null;"
+        }],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_rejected_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_resolved_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "process:ticketingProcess": {
+        "data": [
+            {
+                "path": "activityPlugins.ticketingProcess::tool5_3.properties.tools[0].properties.fields",
+                "isError": false,
+                "label": "#variable.manager#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "[{\"field\":\"status\",\"value\":\"resolved\"},{\"field\":\"manager\",\"value\":\"#variable.manager#\"}]"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5_3.properties.tools[0].properties.fields[1].value",
+                "isError": false,
+                "label": "#variable.manager#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#variable.manager#"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields",
+                "isError": false,
+                "label": "#variable.priority#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "[{\"field\":\"status\",\"value\":\"approved\"},{\"field\":\"priority\",\"value\":\"#variable.priority#\"},{\"field\":\"approved_by\",\"value\":\"#variable.approved_by#\"},{\"field\":\"agent\",\"value\":\"#variable.agent#\"}]"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields",
+                "isError": false,
+                "label": "#variable.approved_by#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "[{\"field\":\"status\",\"value\":\"approved\"},{\"field\":\"priority\",\"value\":\"#variable.priority#\"},{\"field\":\"approved_by\",\"value\":\"#variable.approved_by#\"},{\"field\":\"agent\",\"value\":\"#variable.agent#\"}]"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields",
+                "isError": false,
+                "label": "#variable.agent#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "[{\"field\":\"status\",\"value\":\"approved\"},{\"field\":\"priority\",\"value\":\"#variable.priority#\"},{\"field\":\"approved_by\",\"value\":\"#variable.approved_by#\"},{\"field\":\"agent\",\"value\":\"#variable.agent#\"}]"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields[1].value",
+                "isError": false,
+                "label": "#variable.priority#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#variable.priority#"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields[2].value",
+                "isError": false,
+                "label": "#variable.approved_by#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#variable.approved_by#"
+            },
+            {
+                "path": "activityPlugins.ticketingProcess::tool5.properties.tools[0].properties.fields[3].value",
+                "isError": false,
+                "label": "#variable.agent#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#variable.agent#"
+            }
+        ],
+        "lastModifiedDate": "May 20, 2025, 7:24:20 PM"
+    },
+    "form:approveRejectTicket": {
+        "data": [{
+            "path": "elements[0].elements[0].elements[1].properties.value",
+            "isError": false,
+            "label": "#currentUser.username#",
+            "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+            "content": "#currentUser.username#"
+        }],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_escalate_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_new_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "form:remark": {
+        "data": [
+            {
+                "path": "elements[0].elements[0].elements[1].properties.value",
+                "isError": false,
+                "label": "#currentUser.firstName#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#currentUser.firstName# #currentUser.lastName#"
+            },
+            {
+                "path": "elements[0].elements[0].elements[1].properties.value",
+                "isError": false,
+                "label": "#currentUser.lastName#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#currentUser.firstName# #currentUser.lastName#"
+            },
+            {
+                "path": "elements[0].elements[0].elements[2].properties.value",
+                "isError": false,
+                "label": "#date.yyyy-MM-dd HH:mm:ss#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#date.yyyy-MM-dd HH:mm:ss#"
+            }
+        ],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_my_pending_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "userview:csts": {
+        "data": [
+            {
+                "path": "properties.welcomeMessage",
+                "isError": false,
+                "label": "#date.EEE, d MMM yyyy#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#date.EEE, d MMM yyyy#"
+            },
+            {
+                "path": "categories[0].menus[0].properties.content",
+                "isError": false,
+                "label": "#request.contextPath#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "<div class=\"ui-welcome\">\n<h1>Apps and Workflow Made Simple<\/h1>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_idea.png\" alt=\"Build apps\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Build apps, not just processes!<\/h3>\n<p>Create full-fledged apps with support for data records management.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_rocket.png\" alt=\"Increased efficiency\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Increased Efficiency and Productivity<\/h3>\n<p>Faster and more consistent completion of manual processes, and with minimal errors.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_cost.png\" alt=\"Lowered cost\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Lowered Cost<\/h3>\n<p>Employees can be guided through complex procedures, hence reducing the cost of training.<\/p>\n<\/div>\n<\/div>"
+            },
+            {
+                "path": "categories[0].menus[0].properties.content",
+                "isError": false,
+                "label": "#request.contextPath#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "<div class=\"ui-welcome\">\n<h1>Apps and Workflow Made Simple<\/h1>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_idea.png\" alt=\"Build apps\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Build apps, not just processes!<\/h3>\n<p>Create full-fledged apps with support for data records management.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_rocket.png\" alt=\"Increased efficiency\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Increased Efficiency and Productivity<\/h3>\n<p>Faster and more consistent completion of manual processes, and with minimal errors.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_cost.png\" alt=\"Lowered cost\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Lowered Cost<\/h3>\n<p>Employees can be guided through complex procedures, hence reducing the cost of training.<\/p>\n<\/div>\n<\/div>"
+            },
+            {
+                "path": "categories[0].menus[0].properties.content",
+                "isError": false,
+                "label": "#request.contextPath#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "<div class=\"ui-welcome\">\n<h1>Apps and Workflow Made Simple<\/h1>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_idea.png\" alt=\"Build apps\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Build apps, not just processes!<\/h3>\n<p>Create full-fledged apps with support for data records management.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_rocket.png\" alt=\"Increased efficiency\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Increased Efficiency and Productivity<\/h3>\n<p>Faster and more consistent completion of manual processes, and with minimal errors.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_cost.png\" alt=\"Lowered cost\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Lowered Cost<\/h3>\n<p>Employees can be guided through complex procedures, hence reducing the cost of training.<\/p>\n<\/div>\n<\/div>"
+            },
+            {
+                "path": "categories[0].menus[0].properties.content",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "<div class=\"ui-welcome\">\n<h1>Apps and Workflow Made Simple<\/h1>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_idea.png\" alt=\"Build apps\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Build apps, not just processes!<\/h3>\n<p>Create full-fledged apps with support for data records management.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_rocket.png\" alt=\"Increased efficiency\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Increased Efficiency and Productivity<\/h3>\n<p>Faster and more consistent completion of manual processes, and with minimal errors.<\/p>\n<\/div>\n<p>&nbsp;<\/p>\n<div class=\"icon\" style=\"margin-right: 20px; margin-bottom: 20px; float: left; clear: left;\"><img src=\"#request.contextPath#/images/icon_cost.png\" alt=\"Lowered cost\" width=\"120\" height=\"85\"><\/div>\n<div class=\"message\">\n<h3>Lowered Cost<\/h3>\n<p>Employees can be guided through complex procedures, hence reducing the cost of training.<\/p>\n<\/div>\n<\/div>"
+            },
+            {
+                "path": "properties.welcomeMessage",
+                "isError": false,
+                "label": "#date.EEE, d MMM yyyy#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#date.EEE, d MMM yyyy#"
+            }
+        ],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_all_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "form:ticket_view_original": {
+        "data": [
+            {
+                "path": "elements[0].elements[1].elements[0].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.ref_id#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.ref_id#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[0].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.ref_id#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[1].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.subject#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.subject#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[1].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.subject#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[2].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.status#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.status#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[2].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.status#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[3].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.createdBy#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.createdBy#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[3].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.createdBy#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[4].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.description#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.description#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[4].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.description#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[5].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.priority#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.priority#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[5].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.priority#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[6].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.dateCreated#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.dateCreated#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[6].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.dateCreated#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[7].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.agent#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.agent#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[7].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.agent#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[8].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.approved_by#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.approved_by#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[8].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.approved_by#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[9].properties.value",
+                "isError": false,
+                "label": "#form.customer_ticket_form.manager#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#form.customer_ticket_form.manager#"
+            },
+            {
+                "path": "elements[0].elements[1].elements[9].properties.value",
+                "isError": false,
+                "label": "",
+                "tool": "org.joget.apps.app.lib.WebCodingOverviewTool",
+                "content": "#form.customer_ticket_form.manager#"
+            }
+        ],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "form:support_ticket_form": {
+        "data": [{
+            "path": "elements[0].elements[1].elements[0].properties.value",
+            "isError": false,
+            "label": "#date.yyyy-MM-dd HH:mm:ss#",
+            "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+            "content": "#date.yyyy-MM-dd HH:mm:ss#"
+        }],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "form:ticket_view_with_remarks": {
+        "data": [{
+            "path": "elements[1].elements[0].elements[1].properties.loadBinder.properties.script",
+            "isError": false,
+            "label": "",
+            "tool": "org.joget.apps.app.lib.BeanShellOverviewTool",
+            "content": "return null;"
+        }],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:my_tickets": {
+        "data": [
+            {
+                "path": "binder.properties.filters",
+                "isError": false,
+                "label": "#currentUser.username#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "[{\"field\":\"createdBy\",\"join\":\"AND\",\"value\":\"#currentUser.username#\",\"operator\":\"=\"}]"
+            },
+            {
+                "path": "binder.properties.filters[0].value",
+                "isError": false,
+                "label": "#currentUser.username#",
+                "tool": "org.joget.apps.app.lib.HashVariableOverviewTool",
+                "content": "#currentUser.username#"
+            }
+        ],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    },
+    "datalist:cst_closed_tickets": {
+        "data": [],
+        "lastModifiedDate": "May 20, 2025, 7:32:47 PM"
+    }
+}
