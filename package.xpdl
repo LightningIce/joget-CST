@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="customerSupportTicketingSystem" Name="Customer Support Ticketing System" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor/>
+        <Created/>
+    </PackageHeader>
+    <Script Type="text/javascript"/>
+    <Participants>
+        <Participant Id="customer" Name="Customer">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="agent" Name="Support Agent">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="manager" Name="Manager">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+    </Participants>
+    <Applications>
+        <Application Id="default_application"/>
+    </Applications>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="ticketingProcess" Name="Ticketing Process">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="priority" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="approved_by" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="manager" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="agent" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="agent_solve" Name="Agent Solve">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="145,53.147726999999975"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="approve_reject_ticket" Name="Approve / Reject Ticket">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>manager</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="manager"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="300,30.352271067382816"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route2">
+                    <Route/>
+                    <Performer>manager</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition8"/>
+                                    <TransitionRef Id="transition16"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="manager"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="470,51.352271067382816"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route3">
+                    <Route/>
+                    <Performer>agent</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition9"/>
+                                    <TransitionRef Id="transition10"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="311,92.26137446093747"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="manager_solve" Name="Manager Solve">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>manager</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="manager"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="625,24.352271067382816"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route4">
+                    <Route/>
+                    <Performer>agent</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition13"/>
+                                    <TransitionRef Id="transition15"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="803,-99.71592046093753"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="notify_completion" Name="Notify Completion">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="92,299.36363886523435"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="notify_approval" Name="Notify Approval">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="351,316.000021921875"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5" Name="approved">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="439,209.1704625957031"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5_2" Name="rejected">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="613,135.0000066630859"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5_3" Name="resolved">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="75,206.99999903369138"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5_2_2" Name="escalatedManager">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="277.00001525878906,-6.988625539062525"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5_2_2_2" Name="closed">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="812,88.00000666308591"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5_3_2" Name="resolved">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="626.9999885559082,-2.62500859570315"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="activity4" Name="Remark">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>customer</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="customer"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="260,48.26136492419434"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="notify_reject" Name="Notify Reject">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="567,292"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="notify_reject_2" Name="Notify Reject">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="968,210"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="approve_reject_ticket" Id="transition7" To="route2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route4" Id="transition13" To="tool5_2_2_2">
+                    <Condition Type="CONDITION">status==="closed"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition8" To="tool5">
+                    <Condition Type="CONDITION">status==="approved"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="agent_solve" Id="transition6" To="route3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route3" Id="transition9" To="tool5_2_2">
+                    <Condition Type="CONDITION">status=="escalatedManager"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route3" Id="transition10" To="tool5_3">
+                    <Condition Type="CONDITION">status==="resolved"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="manager_solve" Id="transition14" To="route4">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route4" Id="transition15" To="tool5_3_2">
+                    <Condition Type="CONDITION">status==="resolved"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition16" To="tool5_2">
+                    <Condition Type="CONDITION">status==="rejected"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="notify_approval" Id="transition17" To="agent_solve">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5" Id="transition18" To="notify_approval">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5_3" Id="transition20" To="notify_completion">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5_2_2" Id="transition21" To="manager_solve">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5_3_2" Id="transition23" To="notify_completion">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="activity4" Id="transition25" To="approve_reject_ticket">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5_2" Id="transition19" To="notify_reject">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool5_2_2_2" Id="transition22" To="notify_reject_2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="customer;manager;agent"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=customer,CONNECTING_ACTIVITY_ID=activity4,X_OFFSET=80,Y_OFFSET=40,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=agent,CONNECTING_ACTIVITY_ID=notify_reject,X_OFFSET=1100.0000305175781,Y_OFFSET=330.09092234301755,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=agent,CONNECTING_ACTIVITY_ID=notify_reject_2,X_OFFSET=724,Y_OFFSET=258.1022786967773,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=agent,CONNECTING_ACTIVITY_ID=notify_completion,X_OFFSET=274,Y_OFFSET=354.272727,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>
