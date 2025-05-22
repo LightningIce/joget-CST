@@ -24,6 +24,18 @@
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [
                 {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "",
+                        "userviewCacheScope": "",
+                        "id": "B260F3452E74497AACDD6536BAB86355",
+                        "label": "lcome",
+                        "enableOffline": "",
+                        "customId": "welcome",
+                        "content": "<p>w<\/p>"
+                    }
+                },
+                {
                     "className": "org.joget.apps.userview.lib.RunProcess",
                     "properties": {
                         "runProcessDirectly": "Yes",
