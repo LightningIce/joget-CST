@@ -1,0 +1,161 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "ref_id",
+            "id": "column_4",
+            "label": "Ref Id",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "subject",
+            "id": "column_3",
+            "label": "Subject",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Status",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "status",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Support Agent",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "agent",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_9",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Approved By",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "approved_by",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Escalated Manager",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "manager",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_5",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "createdBy",
+            "id": "column_7",
+            "label": "Created By",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "requested_date",
+            "id": "column_6",
+            "label": "Requested Date",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "CST Resolved Tickets",
+    "id": "cst_resolved_tickets",
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "joins": [],
+            "aggregateField": [],
+            "formDefId": "support_ticket_form",
+            "customSelectionValue": "",
+            "extraCondition": "",
+            "filters": [{
+                "field": "status",
+                "join": "AND",
+                "value": "resolved",
+                "operator": "="
+            }],
+            "groupBy": "",
+            "functionColumns": []
+        }
+    },
+    "actions": [],
+    "order": ""
+}

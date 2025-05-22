@@ -1,0 +1,171 @@
+{
+    "elements": [{
+        "elements": [
+            {
+                "className": "org.joget.apps.form.lib.CustomHTML",
+                "properties": {
+                    "autoPopulate": "False",
+                    "label": "",
+                    "id": "field11"
+                }
+            },
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Ref ID",
+                            "id": "field1",
+                            "value": "#form.customer_ticket_form.ref_id#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Subject",
+                            "id": "field3",
+                            "value": "#form.customer_ticket_form.subject#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Status",
+                            "id": "field2",
+                            "value": "#form.customer_ticket_form.status#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Requester Name",
+                            "id": "field4",
+                            "value": "#form.customer_ticket_form.createdBy#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Description",
+                            "id": "field5",
+                            "value": "#form.customer_ticket_form.description#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Priority",
+                            "id": "field6",
+                            "value": "#form.customer_ticket_form.priority#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Date Requested",
+                            "id": "field7",
+                            "value": "#form.customer_ticket_form.dateCreated#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Support Agent",
+                            "id": "field8",
+                            "value": "#form.customer_ticket_form.agent#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Approved By",
+                            "id": "field9",
+                            "value": "#form.customer_ticket_form.approved_by#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "Escalated Manager",
+                            "id": "field10",
+                            "value": "#form.customer_ticket_form.manager#"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }
+        ],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Customer Information",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Tickets View Original",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "ticket_view_original",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "tickets_view_ori"
+    }
+}

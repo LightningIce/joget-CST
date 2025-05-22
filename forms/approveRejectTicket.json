@@ -1,0 +1,210 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.SubForm",
+                    "properties": {
+                        "parentSubFormId": "",
+                        "permissionHidden": "",
+                        "readonly": "true",
+                        "loadBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "noframe": "",
+                        "formDefId": "ticket_view_original",
+                        "subFormParentId": "",
+                        "id": "ticket_details",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.HiddenField",
+                    "properties": {
+                        "useDefaultWhenEmpty": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "approved_by",
+                        "id": "approve_by",
+                        "value": "#currentUser.username#"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "multiple": "",
+                        "options": [
+                            {
+                                "label": "Approve",
+                                "value": "approved",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Reject",
+                                "value": "rejected",
+                                "grouping": ""
+                            }
+                        ],
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "status",
+                        "label": "Approve / Reject",
+                        "id": "status",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "multiple": "",
+                        "options": [
+                            {
+                                "label": "Low",
+                                "value": "low",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Medium",
+                                "value": "medium",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "High",
+                                "value": "high",
+                                "grouping": ""
+                            }
+                        ],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "priority",
+                        "label": "Priority",
+                        "id": "priority",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "org.joget.plugin.enterprise.UserOptionsBinder",
+                            "properties": {
+                                "addEmptyOption": "true",
+                                "optionLabel": "username",
+                                "useAjax": "",
+                                "groupId": "agent",
+                                "deptId": "",
+                                "cacheInterval": "",
+                                "emptyLabel": "Please Select",
+                                "grouping": "",
+                                "orgId": ""
+                            }
+                        },
+                        "multiple": "",
+                        "options": [],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "agent",
+                        "label": "Support Agent",
+                        "id": "agent",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Approve Reject Ticket",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "approveRejectTicket",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "ar_ticket"
+    }
+}
