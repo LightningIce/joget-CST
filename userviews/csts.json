@@ -18,10 +18,10 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "B260F3452E74497AACDD6536BAB86355",
-                        "label": "lcome",
+                        "label": "Welcome",
                         "enableOffline": "",
                         "customId": "welcome",
-                        "content": "<p>w<\/p>"
+                        "content": "<p><span style=\"color: rgb(236, 240, 241);\">.<\/span><\/p>"
                     }
                 },
                 {
@@ -122,10 +122,10 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "2D2E3A24CB244238CF33DFA2FD537C13",
-                        "label": "lcome",
+                        "label": "Support Agent",
                         "enableOffline": "",
                         "customId": "welcome",
-                        "content": "<p>dw<\/p>"
+                        "content": "<p><span style=\"color: rgb(255, 255, 255);\">.<\/span><\/p>"
                     }
                 },
                 {
@@ -176,10 +176,10 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "69E27BCCA4EA4413F077B607C3F6D37C",
-                        "label": "lcome",
+                        "label": "Admin Dashboard",
                         "enableOffline": "",
                         "customId": "welcome",
-                        "content": "<p>dw<\/p>"
+                        "content": "<p><span style=\"color: rgb(255, 255, 255);\">.<\/span><\/p>"
                     }
                 },
                 {
