@@ -168,6 +168,18 @@
             "className": "org.joget.apps.userview.model.UserviewCategory",
             "menus": [
                 {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "",
+                        "userviewCacheScope": "",
+                        "id": "69E27BCCA4EA4413F077B607C3F6D37C",
+                        "label": "lcome",
+                        "enableOffline": "",
+                        "customId": "welcome",
+                        "content": "<p>dw<\/p>"
+                    }
+                },
+                {
                     "className": "org.joget.plugin.enterprise.DataListInboxMenu",
                     "properties": {
                         "appFilter": "process",
