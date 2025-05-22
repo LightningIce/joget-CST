@@ -1,5 +1,4 @@
 <appDefinition>
-   <appId>customerSupportTicketingSystem</appId>
    <id>customerSupportTicketingSystem</id>
    <version></version>
    <name>Customer Support Ticketing System</name>
@@ -12,6 +11,8 @@
    <environmentVariableList>
       <environmentVariable>
          <id>counter</id>
+         <appId>customerSupportTicketingSystem</appId>
+         <appVersion>2</appVersion>
          <value>2</value>
          <remarks>Used for plugin: Id Generator Field</remarks>
       </environmentVariable>
