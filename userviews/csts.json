@@ -3,18 +3,7 @@
     "categories": [
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.apps.userview.lib.HtmlPage",
-                "properties": {
-                    "userviewCacheDuration": "",
-                    "userviewCacheScope": "",
-                    "id": "9900bdf1-f90e-41ab-ba28-ef275b4a0fe9",
-                    "label": "lcome",
-                    "enableOffline": "",
-                    "customId": "welcome",
-                    "content": "<p>dw<\/p>"
-                }
-            }],
+            "menus": [],
             "properties": {
                 "id": "category-EE74E4F4426241BD9BC3BC73B1D24AC7",
                 "label": "<i class='fa fa-home'><\/i> Home"
@@ -126,30 +115,44 @@
         },
         {
             "className": "org.joget.apps.userview.model.UserviewCategory",
-            "menus": [{
-                "className": "org.joget.plugin.enterprise.DataListInboxMenu",
-                "properties": {
-                    "appFilter": "process",
-                    "list-customFooter": "",
-                    "cacheAllLinks": "",
-                    "assignment-customHeader": "",
-                    "keyName": "",
-                    "assignment-customFooter": "",
-                    "label": "Solving Tickets",
-                    "enableOffline": "",
-                    "customId": "solving_tickets",
-                    "showDetail": "",
-                    "datalistId": "cst_my_pending_tickets",
-                    "userviewCacheDuration": "20",
-                    "cacheListAction": "",
-                    "userviewCacheScope": "",
-                    "processId": "ticketingProcess",
-                    "showPopup": "",
-                    "rowCount": "",
-                    "id": "0A2FB42AE42447A2A12D0C9CDD107978",
-                    "list-customHeader": ""
+            "menus": [
+                {
+                    "className": "org.joget.apps.userview.lib.HtmlPage",
+                    "properties": {
+                        "userviewCacheDuration": "",
+                        "userviewCacheScope": "",
+                        "id": "2D2E3A24CB244238CF33DFA2FD537C13",
+                        "label": "lcome",
+                        "enableOffline": "",
+                        "customId": "welcome",
+                        "content": "<p>dw<\/p>"
+                    }
+                },
+                {
+                    "className": "org.joget.plugin.enterprise.DataListInboxMenu",
+                    "properties": {
+                        "appFilter": "process",
+                        "list-customFooter": "",
+                        "cacheAllLinks": "",
+                        "assignment-customHeader": "",
+                        "keyName": "",
+                        "assignment-customFooter": "",
+                        "label": "Solving Tickets",
+                        "enableOffline": "",
+                        "customId": "solving_tickets",
+                        "showDetail": "",
+                        "datalistId": "cst_my_pending_tickets",
+                        "userviewCacheDuration": "20",
+                        "cacheListAction": "",
+                        "userviewCacheScope": "",
+                        "processId": "ticketingProcess",
+                        "showPopup": "",
+                        "rowCount": "",
+                        "id": "0A2FB42AE42447A2A12D0C9CDD107978",
+                        "list-customHeader": ""
+                    }
                 }
-            }],
+            ],
             "properties": {
                 "hide": "",
                 "permission": {
