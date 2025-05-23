@@ -18,7 +18,7 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "B260F3452E74497AACDD6536BAB86355",
-                        "label": "lcome",
+                        "label": "Welcome",
                         "enableOffline": "",
                         "customId": "welcome",
                         "content": "<p>w<\/p>"
@@ -122,7 +122,7 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "2D2E3A24CB244238CF33DFA2FD537C13",
-                        "label": "lcome",
+                        "label": "Welcome",
                         "enableOffline": "",
                         "customId": "welcome",
                         "content": "<p><span style=\"color: rgb(255, 255, 255);\">dw<\/span><\/p>"
@@ -176,7 +176,7 @@
                         "userviewCacheDuration": "",
                         "userviewCacheScope": "",
                         "id": "69E27BCCA4EA4413F077B607C3F6D37C",
-                        "label": "lcome",
+                        "label": "Welcome",
                         "enableOffline": "",
                         "customId": "welcome",
                         "content": "<p>dw<\/p>"
