@@ -125,7 +125,7 @@
                         "label": "lcome",
                         "enableOffline": "",
                         "customId": "welcome",
-                        "content": "<p>dw<\/p>"
+                        "content": "<p><span style=\"color: rgb(255, 255, 255);\">dw<\/span><\/p>"
                     }
                 },
                 {
